@@ -1,4 +1,4 @@
-<p align="center"><a href="https://www.sternenzelt.net.pe" target="_blank"><img src="https://raw.githubusercontent.com/SternenzeltDevTeam/SternenzeltMainWebsite/refs/heads/main/src/img/logo_banner.png"></a></p>
+<p align="center"><a href="https://www.sternenzelt.net.pe" target="_blank"><img src="https://raw.githubusercontent.com/SternenzeltDevTeam/SternenzeltMainWebsite/refs/heads/main/asssets/img/logo_banner.png"></a></p>
 
 ## Acerca de Sternenzelt
 
