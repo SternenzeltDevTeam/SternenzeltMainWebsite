@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -34,11 +34,11 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DB_URL'),
-            'host' => env('DB_HOST', 'sternenzeltdevtest-server.postgres.database.azure.com'),
+            'host' => env('DB_HOST', 'sternenzeltdatabasedev-1.crgoce8umcn0.us-east-1.rds.amazonaws.com'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'sternenzeltdevtest-database'),
-            'username' => env('DB_USERNAME', 'oorrmlsfwn'),
-            'password' => env('DB_PASSWORD', 'Mj09tO7w2yshO$dI'),
+            'database' => env('DB_DATABASE', 'sternenzeltsql'),
+            'username' => env('DB_USERNAME', 'SternenzeltAdmin'),
+            'password' => env('DB_PASSWORD', 'rNW4zmOX9hmxDvx9Loft'),
             'charset' => env('DB_CHARSET', 'utf8'),
             'prefix' => '',
             'prefix_indexes' => true,
