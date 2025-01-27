@@ -15,7 +15,7 @@
         <meta content="consultoría tecnológica, desarrollo de software, proyectos científicos, ingeniería IT, soluciones tecnológicas, innovación en tecnología, Sternenzelt" name="keywords">
         
         <!-- Favicon -->
-        <link href="public/sternenzelt_icon.svg" type="image/svg+xml" rel="icon">
+        <link href="public/sternenzelt_favicon.png" type="image/png" rel="icon">
         <!-- Final de Favicon -->
 
         <!--Fuentes de Google-->
