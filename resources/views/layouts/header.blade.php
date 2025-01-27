@@ -36,6 +36,17 @@
         ======================================================== -->
     </head>
     <body>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="#oficinas">Oficinas</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#noticias">Noticias</a></li>
+                    <li><a href="#es-en">ES | EN</a></li>
+                    <li><a href="#contacto">CONTÁCTENOS</a></li>
+                </ul>
+            </nav>
+        </div>
         <header>
             <h1>Sternenzelt</h1>
             <nav>
