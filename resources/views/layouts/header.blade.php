@@ -40,10 +40,11 @@
             <h1>Sternenzelt</h1>
             <nav>
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#sobre">Sobre Nosotros</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#inicio">Servicios</a></li>
+                    <li><a href="#sobre">Industrias</a></li>
+                    <li><a href="#servicios">Publicaciones</a></li>
+                    <li><a href="#contacto">Conózcanos</a></li>
+                    <li><a href="#contacto">Iniciar Sesión</a></li>
                 </ul>
             </nav>
         </header>
