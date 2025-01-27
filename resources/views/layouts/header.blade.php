@@ -45,5 +45,15 @@
         ======================================================== -->
     </head>
     <body>
-        <p>a</p>
+        <header>
+            <h1>Sternenzelt</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre">Sobre Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
 </html>
