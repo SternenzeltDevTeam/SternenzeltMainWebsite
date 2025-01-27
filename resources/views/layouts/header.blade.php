@@ -27,15 +27,6 @@
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PJLHWZJ8');</script>
         <!-- End Google Tag Manager -->
         
-        <?php
-         $ch = curl_init();
-         curl_setopt($ch, CURLOPT_URL, "https://api.ipquery.io/?format=json");
-         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-         $response = curl_exec($ch);
-         curl_close($ch);
-         echo $response;
-        ?>
-
         <!-- =======================================================
          * Nombre de proyecto: Sternenzelt Website
          * Actualizado: 26/01/2025 Versión A_1.0 
