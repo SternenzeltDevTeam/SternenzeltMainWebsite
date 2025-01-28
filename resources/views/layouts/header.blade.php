@@ -36,17 +36,23 @@
         ======================================================== -->
     </head>
     <body>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="#oficinas">Oficinas</a></li>
-                    <li><a href="#equipo">Equipo</a></li>
-                    <li><a href="#noticias">Noticias</a></li>
-                    <li><a href="#es-en">ES | EN</a></li>
-                    <li><a href="#contacto">CONTÁCTENOS</a></li>
-                </ul>
-            </nav>
-        </div>
+
+    <!-- ======== Barra Superior ====== -->    
+        <section id="topbar" class="fixed-top d-flex align-items-center">
+         <div>
+             <nav>
+                 <ul>
+                     <li><a href="#oficinas">Oficinas</a></li>
+                     <li><a href="#equipo">Equipo</a></li>
+                     <li><a href="#noticias">Noticias</a></li>
+                     <li><a href="#es-en">ES | EN</a></li>
+                     <li><a href="#contacto">CONTÁCTENOS</a></li>
+                 </ul>
+             </nav>
+         </div>
+        </section>
+
+    <!-- ======= Header ======= -->
         <header>
             <h1>Sternenzelt</h1>
             <nav>
