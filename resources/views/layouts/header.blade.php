@@ -18,6 +18,9 @@
         <link href="public/sternenzelt_favicon.png" type="image/png" rel="icon">
         <!-- Final de Favicon -->
 
+        <!-- CSS -->
+        <link rel="stylesheet" href="resources/css/app.css">
+
         <!--Fuentes de Google-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
