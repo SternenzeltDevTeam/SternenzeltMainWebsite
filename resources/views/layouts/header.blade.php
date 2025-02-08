@@ -15,11 +15,11 @@
         <meta content="consultoría tecnológica, desarrollo de software, proyectos científicos, ingeniería IT, soluciones tecnológicas, innovación en tecnología, Sternenzelt" name="keywords">
         
         <!-- Favicon -->
-        <link href="public/sternenzelt_favicon.png" type="image/png" rel="icon">
+        <link href="{{ asset('favicon.png') }}" type="image/png" rel="icon">
         <!-- Final de Favicon -->
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="resources/css/app.css">
+        <!-- CSS and JS -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <!--Fuentes de Google-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
