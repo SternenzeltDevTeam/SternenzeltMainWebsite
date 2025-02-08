@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="X-UA-Compatible" Content="ie-edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!--Información y titulo-->
         <title> Sternenzelt | Soluciones en Ingeniería y Software.</title>
@@ -68,4 +68,5 @@
                 </ul>
             </nav>
         </header>
+    </body>
 </html>
