@@ -1,0 +1,14 @@
+:root {
+    --vector-color-light: rgba(0, 255, 255, 0.6);
+    --vector-color-dark: rgba(0, 139, 139, 0.6);
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#constellationCanvas {
+    display: block;
+    background-color: black;
+}

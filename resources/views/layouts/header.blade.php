@@ -19,6 +19,7 @@
         <!-- Final de Favicon -->
 
         <!-- CSS and JS -->
+        <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <!--Fuentes de Google-->
