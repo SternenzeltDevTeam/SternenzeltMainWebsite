@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!--Información y titulo-->
-        <title> Sternenzelt | Soluciones en Ingeniería y Software.</title>
+        <title>{{ $title.'|'.env ('APP_NAME') }}</title>
         <meta content="Sternenzelt es una consultora especializada en tecnología, 
         desarrollo de software y proyectos científicos. Ofrecemos soluciones innovadoras y personalizadas 
         para impulsar el crecimiento y la eficiencia de tu empresa. 
@@ -15,11 +15,11 @@
         <meta content="consultoría tecnológica, desarrollo de software, proyectos científicos, ingeniería IT, soluciones tecnológicas, innovación en tecnología, Sternenzelt" name="keywords">
         
         <!-- Favicon -->
-        <link href="{{ asset('favicon.png') }}" type="image/png" rel="icon">
+        <link rel='shortcut icon' type='image/x-icon' href="{{ asset (favicon.png) }}"/>
         <!-- Final de Favicon -->
 
         <!-- CSS and JS -->
-        <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
+        <script type="text/javascript" src="{{ resource_path ('assets/js/app.js') }}"></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <!--Fuentes de Google-->
