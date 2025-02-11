@@ -55,15 +55,35 @@ jobs:
           composer dump-autoload
           php artisan optimize:clear
 
-      - name: Set permissions for storage and cache
+      - name: Create Laravel directory structure
         run: |
-         chmod -R 775 /home/site/wwwroot/storage
-         chmod -R 775 /home/site/wwwroot/bootstrap/cache
+          dirs=(
+            "/home/site/wwwroot/storage/app/public"
+            "/home/site/wwwroot/storage/framework/cache"
+            "/home/site/wwwroot/storage/framework/sessions"
+            "/home/site/wwwroot/storage/framework/views"
+            "/home/site/wwwroot/storage/logs"
+            "/home/site/wwwroot/bootstrap/cache"
+          )
+    
+          for dir in "${dirs[@]}"; do
+            mkdir -p $dir
+            echo "Directorio creado: $dir"
+          done
 
-      - name: Create necessary directories
+          find /home/site/wwwroot/storage -type d -exec chmod 775 {} \;
+          find /home/site/wwwroot/storage -type f -exec chmod 664 {} \;
+          find /home/site/wwwroot/bootstrap/cache -type d -exec chmod 775 {} \;
+          find /home/site/wwwroot/bootstrap/cache -type f -exec chmod 664 {} \;
+
+      - name: Create symbolic link for public storage
+        run: php artisan storage:link
+
+      - name: Verify directory structure (useful for debugging)
         run: |
-          mkdir -p /home/site/wwwroot/storage/logs
-          mkdir -p /home/site/wwwroot/bootstrap/cache
+          echo "Verificando estructura de directorios:"
+          ls -l /home/site/wwwroot/storage
+          ls -l /home/site/wwwroot/bootstrap/cache
         
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
