@@ -50,7 +50,7 @@
                      <li><a href="#equipo">Equipo</a></li>
                      <li><a href="#noticias">Noticias</a></li>
                      <li><a href="#es-en">ES | EN</a></li>
-                     <li><a href="#contacto">CONTÁCTENOS</a></li>
+                     <li><a href="#contacto" class="contact-button">CONTÁCTENOS</a></li>
                  </ul>
              </nav>
          </div>
