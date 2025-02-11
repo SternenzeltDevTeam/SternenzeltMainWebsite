@@ -1,6 +1,8 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
+name: Azure Laravel Deploy
+
 on:
   push:
     branches:
@@ -21,7 +23,7 @@ jobs:
         with:
           php-version: '8.3.9'
           extensions: mbstring, ctype, xml, fileinfo, tokenizer, openssl, pdo, mysql, pgsql
-          ini-values: post_max_size=256M, upload_max_filesize=256M
+          ini-values: post_max_size=512M, upload_max_filesize=1024M
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -31,7 +33,7 @@ jobs:
       - name: Install Composer dependencies
         run: |
           composer validate --no-check-publish
-          composer install --prefer-dist --no-progress --no-interaction
+          composer install --prefer-dist --no-progress --no-interaction --optimize- --no-suggest
 
       - name: Install NPM dependencies
         run: npm ci
@@ -52,7 +54,17 @@ jobs:
           mkdir -p storage/framework/{sessions,views,cache}
           composer dump-autoload
           php artisan optimize:clear
-          
+
+      - name: Set permissions for storage and cache
+        run: |
+         chmod -R 775 /home/site/wwwroot/storage
+         chmod -R 775 /home/site/wwwroot/bootstrap/cache
+
+      - name: Create necessary directories
+        run: |
+          mkdir -p /home/site/wwwroot/storage/logs
+          mkdir -p /home/site/wwwroot/bootstrap/cache
+        
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
 
