@@ -41,8 +41,11 @@ jobs:
 
       - name: Laravel Environment Setup
         run: |
-          php artisan key:generate --env=production
           php artisan storage:link
+          php artisan config:clear
+          php artisan cache:clear
+          php artisan view:clear
+          php artisan route:clear
 
       - name: Prepare deployment files
         run: |
