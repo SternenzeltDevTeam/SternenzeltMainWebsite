@@ -33,7 +33,7 @@ jobs:
       - name: Install Composer dependencies
         run: |
           composer validate --no-check-publish
-          composer install --prefer-dist --no-progress --no-interaction --optimize- --no-suggest
+          composer install --prefer-dist --no-progress --no-interaction --no-suggest
 
       - name: Install NPM dependencies
         run: npm ci
