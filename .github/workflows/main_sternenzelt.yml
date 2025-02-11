@@ -1,8 +1,6 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy PHP app to Azure Web App - sternenzelt
-
 on:
   push:
     branches:
@@ -13,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read #This is required for actions/checkout
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
@@ -21,29 +19,37 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'
+          php-version: '8.3.9'
+          extensions: mbstring, ctype, xml, fileinfo, tokenizer, openssl, pdo, mysql, pgsql
+          ini-values: post_max_size=256M, upload_max_filesize=256M
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
-      
+          node-version: '18'
+
+      - name: Install Composer dependencies
+        run: |
+          composer validate --no-check-publish
+          composer install --prefer-dist --no-progress --no-interaction
+
       - name: Install NPM dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build assets
         run: npm run build
 
-      - name: Check if composer.json exists
-        id: check_files
-        uses: andstor/file-existence-action@v1
-        with:
-          files: 'composer.json'
+      - name: Laravel Environment Setup
+        run: |
+          php artisan key:generate
+          php artisan storage:link
 
-      - name: Run composer install if composer.json exists
-        if: steps.check_files.outputs.files_exists == 'true'
-        run: composer validate --no-check-publish && composer install --prefer-dist --no-progress
-
+      - name: Prepare deployment files
+        run: |
+          mkdir -p storage/framework/{sessions,views,cache}
+          composer dump-autoload
+          php artisan optimize:clear
+          
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
 
