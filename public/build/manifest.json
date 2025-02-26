@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-DdfHQXt6.css",
+    "file": "assets/app-BpmfYUvY.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -8,6 +8,12 @@
     "file": "assets/app-Xaw6OIO1.js",
     "name": "app",
     "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/constellarbg.js": {
+    "file": "assets/constellarbg-CCaq2z5x.js",
+    "name": "constellarbg",
+    "src": "resources/js/constellarbg.js",
     "isEntry": true
   }
 }
