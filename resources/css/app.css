@@ -6,9 +6,49 @@
 body {
     margin: 0;
     overflow: hidden;
+    background-color: black; /* Fondo negro para todo el body */
 }
 
 #constellationCanvas {
     display: block;
     background-color: black;
+}
+
+#topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: right;
+}
+
+#topbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#topbar nav ul li a {
+    text-decoration: none;
+    color: #35928E;
+    font-family: Inter, sans-serif;
+    font-size: 17.34px;
+}
+
+#topbar nav ul li a:hover {
+    color: #3EB8B3;
+}
+
+#topbar .contact-button {
+    background: linear-gradient(178deg, #3EB8B3 0%, #001A31 100%);
+    display: flex;
+    width: 163.51px;
+    height: 37.161px;
+    color: #F4F4F4;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 17.342px;
+    padding: 10px 15px 10px 15px;
+    text-align: center;
+    line-height: normal;
 }

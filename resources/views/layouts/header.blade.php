@@ -6,6 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!--Información y titulo-->
+        <title>{{ ($title ?? 'Default Title') . ' | ' . config('app.name') }}</title>
+        
         <meta content="Sternenzelt es una consultora especializada en tecnología, 
         desarrollo de software y proyectos científicos. Ofrecemos soluciones innovadoras y personalizadas 
         para impulsar el crecimiento y la eficiencia de tu empresa. 
@@ -14,9 +16,11 @@
         <meta content="consultoría tecnológica, desarrollo de software, proyectos científicos, ingeniería IT, soluciones tecnológicas, innovación en tecnología, Sternenzelt" name="keywords">
         
         <!-- Favicon -->
+        <link rel="icon" href="{{ asset('images/favicon.png') }}">
         <!-- Final de Favicon -->
 
         <!-- CSS and JS -->
+        @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/constellarbg.js'])
         <!--Fuentes de Google-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +41,7 @@
     <body>
 
     <!-- ======== Barra Superior ====== -->    
+    <canvas id="constellationCanvas"></canvas>
         <section id="topbar" class="fixed-top d-flex align-items-center">
          <div>
              <nav>
@@ -45,7 +50,7 @@
                      <li><a href="#equipo">Equipo</a></li>
                      <li><a href="#noticias">Noticias</a></li>
                      <li><a href="#es-en">ES | EN</a></li>
-                     <li><a href="#contacto">CONTÁCTENOS</a></li>
+                     <li><a href="#contacto" class="contact-button">CONTÁCTENOS</a></li>
                  </ul>
              </nav>
          </div>

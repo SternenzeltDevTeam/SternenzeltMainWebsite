@@ -6,7 +6,7 @@ return [
 
     'env' => env('APP_ENV', 'production'),
 
-    'debug' => (bool) env('APP_DEBUG', true),
+    'debug' => (bool) env('APP_DEBUG', false),
 
     'url' => env('APP_URL', 'https://sternenzelt.azurewebsites.net/'),
 
