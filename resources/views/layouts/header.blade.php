@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!--Información y titulo-->
-        <title>{{ ($title ?? 'Default Title') . ' | ' . config('app.name') }}</title>
+        <title>Sternenzelt</title>
         
         <meta content="Sternenzelt es una consultora especializada en tecnología, 
         desarrollo de software y proyectos científicos. Ofrecemos soluciones innovadoras y personalizadas 

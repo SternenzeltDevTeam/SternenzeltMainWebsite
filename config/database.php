@@ -34,18 +34,17 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DB_URL'),
-            'host' => env('DB_HOST', 'sternenzeltpgsql.postgres.database.azure.com'),
+            'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'sternenzeltsql'),
-            'username' => env('DB_USERNAME', 'SternenzeltPGSQLServer'),
-            'password' => env('DB_PASSWORD', 'G7!kL9@xQ2#z'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'charset' => env('DB_CHARSET', 'utf8'),
-            'prefix' => '',
-            'prefix_indexes' => true,
-            'search_path' => 'public',
-            'sslmode' => 'prefer',
+            'prefix' => env('DB_PREFIX', ''),
+            'prefix_indexes' => env('DB_PREFIX_INDEXES', true),
+            'search_path' => env('DB_SEARCH_PATH', 'public'),
+            'sslmode' => env('DB_SSLMODE', 'prefer'),
         ],
-
     ],
 
     /*
